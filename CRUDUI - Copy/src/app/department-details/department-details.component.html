@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-sm-3">
+        Name: <input type="text" class="form-control" [(ngModel)] = "department.name">
+        <button class="btn" (click)="SaveChanges()">Save changes</button>
+    </div>    
+</div>
+<hr>    
+List of Interns in the department
+<table style="width:100%">
+    <tr >
+      <th>Name</th>
+      <th>Age</th> 
+    </tr>
+    <tr *ngFor="let intern of interns">
+      <td>{{intern.name}}</td>
+      <td>{{intern.age}}</td> 
+      <td><button class="btn" (click)="deleteIntern(intern.id)">Delete </button></td>
+    </tr>
+  </table>
+  <hr>
+  Add New Intern
+  <div class="row">
+    <div class="col-sm-2">
+      Name <input type="text" #internName class="form-control">
+      Age <input type="text" #internAge class="form-control">
+      <button class="btn" (click)="AddIntern(internName.value, internAge.value)">Add</button>
+    </div>
+  </div>
+
+

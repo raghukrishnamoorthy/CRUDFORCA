@@ -1,0 +1,23 @@
+<h2>List of Departments</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>Name</th>
+    <th> </th>
+    <th> </th>
+  </tr>
+  <tr *ngFor="let department of departments">
+    <td>{{department.name}}</td>
+    <td><button class="btn btn-info" routerLink="/departments/{{department.id}}">View/Edit</button></td>
+    <td><button class="btn btn-info" (click)="deleteDepartment(department.id)">Delete</button></td>
+  </tr>
+</table>
+<br>
+<hr>
+<div class="row">
+  <div class="col-sm-3">
+    Add new Department <input type="text" #deptName class="form-control">
+    <br>
+    <button class="btn" (click)="AddDept(deptName.value)">Save</button>
+  </div>
+</div>
