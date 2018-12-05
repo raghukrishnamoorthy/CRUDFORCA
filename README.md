@@ -33,3 +33,15 @@ for this to be considered a complete one
 3. Proper boostrap / semantic UI design
 4. Null checks, Exception handling
 5. Piping http calls for Logging and error/retry mechanisms
+
+
+If you need  to run the app
+
+Required:
+-Angular 6
+-.NET Core 2.1 +
+-SQL related packages for localDB
+
+Note: Port number needs to be changed in the departmentService file in the UI side to match where the 
+WEP API is hosted.
+
